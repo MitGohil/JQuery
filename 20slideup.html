@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideUp(1000);
+      });
+
+      $("#stop").click(function () {
+        $("#panel").stop();
+      });
+    });
+  </script>
+  <style>
+    #panel,
+    #flip {
+      padding: 5px;
+      font-size: 18px;
+      text-align: center;
+      background-color: #555;
+      color: white;
+      border: solid 1px #666;
+      border-radius: 3px;
+    }
+
+    #panel {
+      padding: 100px;
+      /* display: none; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="stop">Stop sliding</button>
+
+  <div id="flip">Click to slide up panel</div>
+  <div id="panel">Hello world!</div>
+
+</body>
+
+</html>
